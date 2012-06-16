@@ -31,14 +31,16 @@ no.
 
 Hey, it felt right.
 
->                               Tumbolia Public License
-> 
->    Copyright Joshua Holbrook, 2012
-> 
->    Copying and distribution of this file, with or without modification, are
->    permitted in any medium without royalty provided the copyright notice and
->    this notice are preserved.
-> 
->    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-> 
->      0. opan saurce LOL
+```
+                               Tumbolia Public License
+ 
+    Copyright Joshua Holbrook, 2012 
+ 
+    Copying and distribution of this file, with or without modification, are
+    permitted in any medium without royalty provided the copyright notice and
+    this notice are preserved.
+ 
+    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+ 
+      0. opan saurce LOL
+```
