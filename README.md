@@ -25,7 +25,7 @@ var browserify = hoarders.browserify;
 
 ## Seriously?
 
-no.
+maybe.
 
 ## License:
 
