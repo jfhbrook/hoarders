@@ -13,12 +13,14 @@ request('http://isaacs.couch.xxx/registry/_all_docs', function (err, res, body) 
     author: 'Joshua Holbrook',
     name: 'hoarders',
     description: 'node.js\'s most complete "utility grab-bag". Dedicated to substack.',
-    version: '0.0.0',
+    version: '0.1.0',
     dependencies: (function () {
       var deps = {};
 
       JSON.parse(body).rows.forEach(function (r) {
-        deps[r.id] = '*';
+        if (r.id !== 'hoarders') {
+          deps[r.id] = '*';
+        }
       });
 
       return deps;

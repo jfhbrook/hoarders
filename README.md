@@ -6,17 +6,76 @@
 ## Example:
 
 ```js
-// Require hoarders
-var hoarders = require('hoarders');
-
-// Access any module on npm like whoa
-var async = hoarders.async;
-
-var colors = hoarders.colors;
-
-var browserify = hoarders.browserify;
-
-// AND THE LIST GOES ON
+josh@onix:~/dev/hoarders$ node
+> require('./index')
+undefined
+> async
+{ noConflict: [Function],
+  nextTick: [Function],
+  forEach: [Function],
+  forEachSeries: [Function],
+  forEachLimit: [Function],
+  map: [Function],
+  mapSeries: [Function],
+  reduce: [Function],
+  inject: [Function],
+  foldl: [Function],
+  reduceRight: [Function],
+  foldr: [Function],
+  filter: [Function],
+  filterSeries: [Function],
+  select: [Function],
+  selectSeries: [Function],
+  reject: [Function],
+  rejectSeries: [Function],
+  detect: [Function],
+  detectSeries: [Function],
+  some: [Function],
+  any: [Function],
+  every: [Function],
+  all: [Function],
+  sortBy: [Function],
+  auto: [Function],
+  waterfall: [Function],
+  parallel: [Function],
+  series: [Function],
+  iterator: [Function],
+  apply: [Function],
+  concat: [Function],
+  concatSeries: [Function],
+  whilst: [Function],
+  until: [Function],
+  queue: [Function],
+  log: [Function],
+  dir: [Function],
+  memoize: [Function],
+  unmemoize: [Function] }
+> colors
+{ mode: 'console',
+  bold: [Function],
+  underline: [Function],
+  italic: [Function],
+  inverse: [Function],
+  grey: [Function],
+  black: [Function],
+  yellow: [Function],
+  red: [Function],
+  green: [Function],
+  blue: [Function],
+  white: [Function],
+  cyan: [Function],
+  magenta: [Function],
+  addSequencer: [Function],
+  rainbow: [Function],
+  zebra: [Function],
+  setTheme: [Function],
+  zalgo: [Function],
+  stripColors: [Function] }
+> browserify
+{ [Function] bundle: [Function] }
+> // AND THE LIST GOES ON!
+undefined
+> 
 ```
 
 ## building
