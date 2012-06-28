@@ -3,11 +3,13 @@
 ## node.js's most complete "utility grab-bag".
 ### Dedicated to substack.
 
+![](http://i.imgur.com/WPB5l.jpg)
+
 ## Example:
 
 ```js
 josh@onix:~/dev/hoarders$ node
-> require('./index')
+> require('hoarders')
 undefined
 > async
 { noConflict: [Function],
