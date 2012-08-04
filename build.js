@@ -4,7 +4,7 @@ var request = require('request'),
     fs = require('fs'),
     path = require('path');
 
-request('http://isaacs.couch.xxx/registry/_all_docs', function (err, res, body) {
+request('http://isaacs.iriscouch.com/registry/_all_docs', function (err, res, body) {
   if (err) {
     throw err;
   }
@@ -13,12 +13,15 @@ request('http://isaacs.couch.xxx/registry/_all_docs', function (err, res, body) 
     author: 'Joshua Holbrook',
     name: 'hoarders',
     description: 'node.js\'s most complete "utility grab-bag". Dedicated to substack.',
-    version: '0.1.0',
-    dependencies: (function () {
+    version: '0.1.1',
+    dependencies: (function listDeps() {
       var deps = {};
 
       JSON.parse(body).rows.forEach(function (r) {
-        if (r.id !== 'hoarders') {
+        if (
+          r.id !== 'hoarders' &&
+          !r.id.match(/^_design/)
+        ) {
           deps[r.id] = '*';
         }
       });
@@ -26,8 +29,10 @@ request('http://isaacs.couch.xxx/registry/_all_docs', function (err, res, body) 
       return deps;
     })(),
     main: './index.js',
-    engines: {
-      node: '*'
+    homepage: 'https://github.com/jesusabdullah/hoarders',
+    repository: {
+      type: 'git',
+      url: 'git://github.com/jesusabdullah/hoarders.git'
     }
   }, true, 2));
 });
