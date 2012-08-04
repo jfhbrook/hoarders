@@ -80,6 +80,16 @@ undefined
 > 
 ```
 
+## install
+
+    $ git clone git@github.com:jesusabdullah/hoarders.git
+    $ cd hoarders
+    $ sudo npm link --gangsta
+
+Then to add hoarders to ANY project:
+
+    $ npm link hoarders
+
 ## building
 
     node build.js
