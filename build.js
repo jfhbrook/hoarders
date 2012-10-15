@@ -1,19 +1,36 @@
 #!/usr/bin/env node
 
-var request = require('request'),
-    fs = require('fs'),
+var fs = require('fs'),
     path = require('path');
 
+var request = require('request'),
+    semver = require('semver');
+
+var version = '0.0.0';
+
+var log = console.error;
+
+log('auto-incrementing version...');
+try {
+  version = require('./package.json').version;
+  version = semver.inc(version, 'build');
+}
+catch (err) {
+  log('WARNING: could not auto-increment version');
+}
+
+log('requesting all docs from npm...');
 request('http://isaacs.iriscouch.com/registry/_all_docs', function (err, res, body) {
   if (err) {
     throw err;
   }
+  log('writing package.json...');
 
   fs.writeFileSync(path.resolve(__dirname, 'package.json'), JSON.stringify({
     author: 'Joshua Holbrook',
     name: 'hoarders',
     description: 'node.js\'s most complete "utility grab-bag". Dedicated to substack.',
-    version: '0.1.1',
+    version: version,
     dependencies: (function listDeps() {
       var deps = {};
 
@@ -35,4 +52,6 @@ request('http://isaacs.iriscouch.com/registry/_all_docs', function (err, res, bo
       url: 'git://github.com/jesusabdullah/hoarders.git'
     }
   }, true, 2));
+
+  log('done.');
 });
