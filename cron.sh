@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./build.js && npm publish
+cd /home/josh/crons/hoarders && ./build.js && npm publish
