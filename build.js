@@ -13,7 +13,7 @@ var log = console.error;
 log('auto-incrementing version...');
 try {
   version = require('./package.json').version;
-  version = semver.inc(version, 'build');
+  // version = semver.inc(version, 'build');
 }
 catch (err) {
   log('WARNING: could not auto-increment version');
