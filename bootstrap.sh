@@ -1,3 +1,3 @@
 #!/bin/bash
 
-npm install request semver
+npm install request

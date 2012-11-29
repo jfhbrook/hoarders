@@ -3,8 +3,7 @@
 var fs = require('fs'),
     path = require('path');
 
-var request = require('request'),
-    semver = require('semver');
+var request = require('request');
 
 var version = '0.0.0';
 
@@ -13,10 +12,9 @@ var log = console.error;
 log('auto-incrementing version...');
 try {
   version = require('./package.json').version;
-  // version = semver.inc(version, 'build');
 }
 catch (err) {
-  log('WARNING: could not auto-increment version');
+  log('WARNING: could not get version!');
 }
 
 log('requesting all docs from npm...');
