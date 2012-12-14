@@ -35,7 +35,9 @@ request('http://isaacs.iriscouch.com/registry/_all_docs', function (err, res, bo
       JSON.parse(body).rows.forEach(function (r) {
         if (
           r.id !== 'hoarders' &&
-          !r.id.match(/^_design/)
+          !r.id.match(/^_design/) &&
+          // Keep hoarder's peanut butter out of broofa's chocolate
+          !r.id.match(/^(?:mime|node-uuid|uuid|node-int64)$/)
         ) {
           deps[r.id] = '*';
         }
