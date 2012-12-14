@@ -37,7 +37,7 @@ request('http://isaacs.iriscouch.com/registry/_all_docs', function (err, res, bo
           r.id !== 'hoarders' &&
           !r.id.match(/^_design/) &&
           // Keep hoarder's peanut butter out of broofa's chocolate
-          !r.id.match(/^(?:node-mime|node-uuid|mime|node-int64)$/)
+          !r.id.match(/^(?:mime|node-uuid|uuid|node-int64)$/)
         ) {
           deps[r.id] = '*';
         }
