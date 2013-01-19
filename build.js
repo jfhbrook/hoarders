@@ -5,7 +5,7 @@ var fs = require('fs'),
 
 var request = require('request');
 
-var version = '0.0.0';
+var version = '0.1.4';
 
 var log = console.error;
 
@@ -20,14 +20,6 @@ var blacklist = [
   'node-int64', // broofa
   'uuid' // broofa
 ];
-
-log('automatically setting version...');
-try {
-  version = require('./package.json').version;
-}
-catch (err) {
-  log('WARNING: could not get version!');
-}
 
 log('requesting all docs from npm...');
 request('http://isaacs.iriscouch.com/registry/_all_docs', function (err, res, body) {
