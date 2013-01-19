@@ -9,6 +9,18 @@ var version = '0.0.0';
 
 var log = console.error;
 
+//
+// If you want to opt a package out of hoarders, add it to this list and
+// submit a pull request.
+//
+var blacklist = [
+  'hoarders', // the self
+  'mime', // broofa
+  'node-uuid', // broofa
+  'node-int64', // broofa
+  'uuid' // broofa
+];
+
 log('auto-incrementing version...');
 try {
   version = require('./package.json').version;
@@ -34,8 +46,10 @@ request('http://isaacs.iriscouch.com/registry/_all_docs', function (err, res, bo
 
       JSON.parse(body).rows.forEach(function (r) {
         if (
-          r.id !== 'hoarders' &&
-          !r.id.match(/^_design/)
+          !r.id.match(/^_design/) &&
+          blacklist.every(function (blacklisted) {
+            return blacklisted !== r.id;
+          })
         ) {
           deps[r.id] = '*';
         }
