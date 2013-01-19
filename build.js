@@ -21,7 +21,7 @@ var blacklist = [
   'uuid' // broofa
 ];
 
-log('auto-incrementing version...');
+log('automatically setting version...');
 try {
   version = require('./package.json').version;
 }
