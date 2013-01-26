@@ -18,7 +18,8 @@ var blacklist = [
   'mime', // broofa
   'node-uuid', // broofa
   'node-int64', // broofa
-  'uuid' // broofa
+  'uuid', // broofa
+  'mongo-helper' // SomeKittens
 ];
 
 log('requesting all docs from npm...');
