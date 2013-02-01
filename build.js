@@ -19,8 +19,8 @@ var blacklist = [
   'node-uuid', // broofa
   'node-int64', // broofa
   'uuid', // broofa
-  'mongo-helper' // SomeKittens,
-  'redscript'
+  'mongo-helper', // SomeKittens,
+  'redscript' // AdamBrodzinski 
 ];
 
 log('requesting all docs from npm...');
