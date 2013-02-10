@@ -20,7 +20,7 @@ var blacklist = [
   'node-int64', // broofa
   'uuid', // broofa
   'mongo-helper', // SomeKittens,
-  'redscript' // AdamBrodzinski 
+  'redscript', // AdamBrodzinski 
   'konstant', // cmtt
   'publicsuffixlist' // cmtt
 ];
