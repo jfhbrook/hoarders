@@ -21,6 +21,8 @@ var blacklist = [
   'uuid', // broofa
   'mongo-helper', // SomeKittens,
   'redscript' // AdamBrodzinski 
+  'konstant', // cmtt
+  'publicsuffixlist' // cmtt
 ];
 
 log('requesting all docs from npm...');
