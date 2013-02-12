@@ -115,3 +115,15 @@ Hey, it felt right.
  
       0. opan saurce LOL
 ```
+
+## For those of you with no sense of humor
+
+You may "opt out" of Hoarders by modifying [the blacklist in build.js](https://github.com/jesusabdullah/hoarders/blob/master/build.js#L16-L26) and submitting a pull request.
+
+### BEFORE DOING SO PLEASE KEEP THE FOLLOWING IN MIND:
+
+1. **DON'T BE A DICK YOU ARE NOT ENTITLED.** By publishing your module to npm and giving it a permissive license, you are giving everybody implicit permission to depend on your module all they want. **I OFFER THIS BLACKLIST BECAUSE I AM A NICE GUY** and I just ask that you treat me kindly in return. If you're going to be passive-aggressive about it, then hey, so will I.
+
+2. **PLEASE WRITE GOOD CODE.** Use comments to include your github name next to the blacklisted module name. Run build.js to make sure you didn't forget a comma. Write a reasonable commit message.
+
+3. **Hoarders does not significantly affect download counts.** The build step does not download anything other than the module's name.
