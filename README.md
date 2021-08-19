@@ -17,7 +17,7 @@ npm install hoarders
 then, simply use the utilities exported by hoarders of your choice:
 
 ```js
-var hoarders = require('.');
+var hoarders = require('hoarders');
 
 var app = hoarders.express();
 
