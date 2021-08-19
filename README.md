@@ -17,14 +17,21 @@ npm install hoarders
 then, simply use the utilities exported by hoarders of your choice:
 
 ```js
-var hoarders = require('hoarders');
+var hoarders = require('.');
 
-var express = hoarders.express;
+var app = hoarders.express();
 
-console.log(express);
+app.get('/', function (req, res) {
+  res.send('hello world!');
+});
+
+app.listen(3000, function () {
+  console.log('listening on 3000!');
+});
+
 ```
 
-and voila:
+and voila, a fully featured web server:
 
 ```
 $ node example.js
@@ -35,169 +42,7 @@ added 49 packages, and audited 100 packages in 2s
   run `npm fund` for details
 
 found 0 vulnerabilities
-[Function: createApplication] {
-  application: {
-    init: [Function: init],
-    defaultConfiguration: [Function: defaultConfiguration],
-    lazyrouter: [Function: lazyrouter],
-    handle: [Function: handle],
-    use: [Function: use],
-    route: [Function: route],
-    engine: [Function: engine],
-    param: [Function: param],
-    set: [Function: set],
-    path: [Function: path],
-    enabled: [Function: enabled],
-    disabled: [Function: disabled],
-    enable: [Function: enable],
-    disable: [Function: disable],
-    acl: [Function (anonymous)],
-    bind: [Function (anonymous)],
-    checkout: [Function (anonymous)],
-    connect: [Function (anonymous)],
-    copy: [Function (anonymous)],
-    delete: [Function (anonymous)],
-    get: [Function (anonymous)],
-    head: [Function (anonymous)],
-    link: [Function (anonymous)],
-    lock: [Function (anonymous)],
-    'm-search': [Function (anonymous)],
-    merge: [Function (anonymous)],
-    mkactivity: [Function (anonymous)],
-    mkcalendar: [Function (anonymous)],
-    mkcol: [Function (anonymous)],
-    move: [Function (anonymous)],
-    notify: [Function (anonymous)],
-    options: [Function (anonymous)],
-    patch: [Function (anonymous)],
-    post: [Function (anonymous)],
-    propfind: [Function (anonymous)],
-    proppatch: [Function (anonymous)],
-    purge: [Function (anonymous)],
-    put: [Function (anonymous)],
-    rebind: [Function (anonymous)],
-    report: [Function (anonymous)],
-    search: [Function (anonymous)],
-    source: [Function (anonymous)],
-    subscribe: [Function (anonymous)],
-    trace: [Function (anonymous)],
-    unbind: [Function (anonymous)],
-    unlink: [Function (anonymous)],
-    unlock: [Function (anonymous)],
-    unsubscribe: [Function (anonymous)],
-    all: [Function: all],
-    del: [Function (anonymous)],
-    render: [Function: render],
-    listen: [Function: listen]
-  },
-  request: IncomingMessage {
-    header: [Function: header],
-    get: [Function: header],
-    accepts: [Function (anonymous)],
-    acceptsEncodings: [Function (anonymous)],
-    acceptsEncoding: [Function (anonymous)],
-    acceptsCharsets: [Function (anonymous)],
-    acceptsCharset: [Function (anonymous)],
-    acceptsLanguages: [Function (anonymous)],
-    acceptsLanguage: [Function (anonymous)],
-    range: [Function: range],
-    param: [Function: param],
-    is: [Function: is],
-    protocol: [Getter],
-    secure: [Getter],
-    ip: [Getter],
-    ips: [Getter],
-    subdomains: [Getter],
-    path: [Getter],
-    hostname: [Getter],
-    host: [Getter],
-    fresh: [Getter],
-    stale: [Getter],
-    xhr: [Getter]
-  },
-  response: ServerResponse {
-    status: [Function: status],
-    links: [Function (anonymous)],
-    send: [Function: send],
-    json: [Function: json],
-    jsonp: [Function: jsonp],
-    sendStatus: [Function: sendStatus],
-    sendFile: [Function: sendFile],
-    sendfile: [Function (anonymous)],
-    download: [Function: download],
-    type: [Function: contentType],
-    contentType: [Function: contentType],
-    format: [Function (anonymous)],
-    attachment: [Function: attachment],
-    append: [Function: append],
-    header: [Function: header],
-    set: [Function: header],
-    get: [Function (anonymous)],
-    clearCookie: [Function: clearCookie],
-    cookie: [Function (anonymous)],
-    location: [Function: location],
-    redirect: [Function: redirect],
-    vary: [Function (anonymous)],
-    render: [Function: render]
-  },
-  Route: [Function: Route],
-  Router: [Function (anonymous)] {
-    param: [Function: param],
-    handle: [Function: handle],
-    process_params: [Function: process_params],
-    use: [Function: use],
-    route: [Function: route],
-    acl: [Function (anonymous)],
-    bind: [Function (anonymous)],
-    checkout: [Function (anonymous)],
-    connect: [Function (anonymous)],
-    copy: [Function (anonymous)],
-    delete: [Function (anonymous)],
-    get: [Function (anonymous)],
-    head: [Function (anonymous)],
-    link: [Function (anonymous)],
-    lock: [Function (anonymous)],
-    'm-search': [Function (anonymous)],
-    merge: [Function (anonymous)],
-    mkactivity: [Function (anonymous)],
-    mkcalendar: [Function (anonymous)],
-    mkcol: [Function (anonymous)],
-    move: [Function (anonymous)],
-    notify: [Function (anonymous)],
-    options: [Function (anonymous)],
-    patch: [Function (anonymous)],
-    post: [Function (anonymous)],
-    propfind: [Function (anonymous)],
-    proppatch: [Function (anonymous)],
-    purge: [Function (anonymous)],
-    put: [Function (anonymous)],
-    rebind: [Function (anonymous)],
-    report: [Function (anonymous)],
-    search: [Function (anonymous)],
-    source: [Function (anonymous)],
-    subscribe: [Function (anonymous)],
-    trace: [Function (anonymous)],
-    unbind: [Function (anonymous)],
-    unlink: [Function (anonymous)],
-    unlock: [Function (anonymous)],
-    unsubscribe: [Function (anonymous)],
-    all: [Function (anonymous)]
-  },
-  json: [Function: json],
-  query: [Function: query],
-  raw: [Function: raw],
-  static: [Function: serveStatic] {
-    mime: Mime {
-      types: [Object: null prototype],
-      extensions: [Object: null prototype],
-      default_type: 'application/octet-stream',
-      Mime: [Function: Mime],
-      charsets: [Object]
-    }
-  },
-  text: [Function: text],
-  urlencoded: [Function: urlencoded]
-}
+listening on 3000!
 ```
 
 ## history

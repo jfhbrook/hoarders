@@ -1,5 +1,13 @@
 var hoarders = require('.');
 
-var express = hoarders.express;
+var app = hoarders.express();
 
-console.log(express);
+app.get('/', function (req, res) {
+  res.send('hello world!');
+});
+
+app.listen(3000, function () {
+  console.log('listening on 3000!');
+});
+
+
