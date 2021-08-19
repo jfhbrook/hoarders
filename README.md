@@ -274,6 +274,8 @@ the death knell came from the BIGGEST HATER OF ALL, one ISAAC Z SCHLEUTER:
 08:34 < LOUDBOT> GOOGLE WAVE INVITES! I'VE GOT PLENTY
 ```
 
+(minor edits to the logs for clarity, but this conversation really happened.)
+
 ### but now, after NINE YEARS, I've found a WORK-AROUND.
 
 now, rather than installing the utilities as direct dependencies, hoarders
@@ -285,8 +287,8 @@ the only requirements are `npm` and an internet connection.
 
 ## for the haters:
 
-in the interest of warding off a witch hunt and :v:not violating npm's terms
-of service:v:, this module continues to include the block list of utilities
+in the interest of "warding off a witch hunt" and "not violating npm's terms
+of service", this module continues to include the block list of utilities
 which hoarders does *not* include:
 
 ```
