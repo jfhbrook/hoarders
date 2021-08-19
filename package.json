@@ -26,7 +26,9 @@
     "canceled",
     "banned"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "@jfhbrook/prettier-config-old-school": "^0.1.0",
     "prettier": "^2.3.2",
