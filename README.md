@@ -1,7 +1,6 @@
 # hoarders
 
 ## node.js's most complete "utility grab-bag"
-# back after being **CANCELED** by **isaac** for **nearly a decade**
 ### dedicated to substack
 
 ![](http://i.imgur.com/WPB5l.jpg)
@@ -52,14 +51,8 @@ complete utility grab bag, as an answer to underscore's then-popularity. on a
 ux level, the project was a raging success.
 
 however, hoarders used to directly depend on every module on npm, which in
-2012 was on the order of 20,000 modules. this caused a plethora of haters to
-[come out of the woodwork](https://github.com/jfhbrook/hoarders/issues/2),
-unable to contend with the raw power of the hoarders collection of utilities,
-and quickly began a campaign to CANCEL hoarders.
-
-after a year or more of fighting these slanderous claims of "not being 'cute'"
-and "a layer of unnecessary complexity that permeates the whole npm ecosystem",
-the death knell came from the BIGGEST HATER OF ALL, one ISAAC Z SCHLEUTER:
+2012 was on the order of 20,000 modules. This caused 
+[some concern](https://github.com/jfhbrook/hoarders/issues/2) among the upstream module owners, but the main issue was that NPM (at the time) simply couldn't handle it:
 
 ```
 08:21 < isaacs> jfhbrook: so... bad news.
@@ -127,30 +120,6 @@ now, rather than installing the utilities as direct dependencies, hoarders
 installs them lazily, on-the-fly. this change is practically seamless - simply
 reach for the utility like you would normally and hoarders will do the rest!
 the only requirements are `npm` and an internet connection.
-
-## they might try to CENSOR us but they WON'T SILENCE US. :triumph:
-
-## for the haters:
-
-in the interest of "warding off a witch hunt" and "not violating npm's terms
-of service", this module continues to include the block list of utilities
-which hoarders does *not* include:
-
-```
-$ node
-Welcome to Node.js v16.5.0.
-Type ".help" for more information.
-> var hoarders = require('.');
-undefined
-> hoarders.mime
-Uncaught Error: refusing to install mime because BROOFA is a HATER 😤!
-    at getModule (/home/josh/joshiverse/public/trophies/hoarders/index.js:63:13)
-    at Object.get (/home/josh/joshiverse/public/trophies/hoarders/index.js:46:12)
->
-```
-
-to those who would insist on opting out, simply send a pull request which adds
-your modules to the `haters.json` file in this repo.
 
 ## license
 
