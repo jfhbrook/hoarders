@@ -14,7 +14,7 @@
   },
   "scripts": {
     "format": "prettier *.js *.json --write",
-    "test": "tests-of-the-sierra-madre"
+    "test": "tap test.js"
   },
   "keywords": [
     "hoarders",
@@ -29,6 +29,9 @@
   "devDependencies": {
     "@jfhbrook/prettier-config-old-school": "^0.1.0",
     "prettier": "^2.3.2",
-    "tests-of-the-sierra-madre": "^1.0.0"
+    "tap": "^16.0.1"
+  },
+  "tap": {
+    "check-coverage": false
   }
 }
