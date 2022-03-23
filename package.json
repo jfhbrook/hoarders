@@ -26,12 +26,9 @@
     "canceled",
     "banned"
   ],
-  "dependencies": {
-    "express": "^4.17.1"
-  },
   "devDependencies": {
     "@jfhbrook/prettier-config-old-school": "^0.1.0",
     "prettier": "^2.3.2",
-    "tests-of-the-sierra-madre": "^0.0.0"
+    "tests-of-the-sierra-madre": "^1.0.0"
   }
 }

@@ -4,12 +4,6 @@ var spawnSync = require('child_process').spawnSync;
 
 var log = process.logging ? process.logging : function () {};
 
-//
-// If you want to opt a package out of hoarders, add it to this list and
-// submit a pull request.
-//
-exports.haters = require('./haters.json');
-
 // core modules
 exports.coreModules = [
   'assert',
@@ -57,15 +51,6 @@ function getModule(moduleName) {
       !exports.coreModules[moduleName],
       'a core module should require first try'
     );
-    if (exports.haters[moduleName]) {
-      throw new Error(
-        'refusing to install ' +
-          moduleName +
-          ' because ' +
-          exports.haters[moduleName].author.toUpperCase() +
-          ' is a HATER 😤!'
-      );
-    }
     log('error on first require(%module): %err', {
       err: err,
       module: moduleName

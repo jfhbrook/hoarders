@@ -130,28 +130,6 @@ the only requirements are `npm` and an internet connection.
 
 ## they might try to CENSOR us but they WON'T SILENCE US. :triumph:
 
-## for the haters:
-
-in the interest of "warding off a witch hunt" and "not violating npm's terms
-of service", this module continues to include the block list of utilities
-which hoarders does *not* include:
-
-```
-$ node
-Welcome to Node.js v16.5.0.
-Type ".help" for more information.
-> var hoarders = require('.');
-undefined
-> hoarders.mime
-Uncaught Error: refusing to install mime because BROOFA is a HATER 😤!
-    at getModule (/home/josh/joshiverse/public/trophies/hoarders/index.js:63:13)
-    at Object.get (/home/josh/joshiverse/public/trophies/hoarders/index.js:46:12)
->
-```
-
-to those who would insist on opting out, simply send a pull request which adds
-your modules to the `haters.json` file in this repo.
-
 ## license
 
 this project is published under the well known and venerated tumbolia public
